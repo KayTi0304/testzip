@@ -1,0 +1,103 @@
+{
+  "trade_pairs": [
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "CON",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.01\",\"leverage\":\"100\",\"multiplier10\":\"\",\"multiplier14\":\"\",\"multiplier21\":\"\",\"takeProfitPercent\":\"50.0\"}",
+      "interval": "5m",
+      "priority": "1",
+      "req_cap_vol": "500",
+      "trade_pair": "BTCUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "BAL",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.015\",\"leverage\":\"100\",\"multiplier10\":\"\",\"multiplier14\":\"\",\"multiplier21\":\"\",\"takeProfitPercent\":\"50.0\"}",
+      "interval": "5m",
+      "priority": "1",
+      "req_cap_vol": "500",
+      "trade_pair": "BTCUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "AGG",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.02\",\"leverage\":\"100\",\"multiplier10\":\"\",\"multiplier14\":\"\",\"multiplier21\":\"\",\"takeProfitPercent\":\"50.0\"}",
+      "interval": "5m",
+      "priority": "1",
+      "req_cap_vol": "500",
+      "trade_pair": "BTCUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "CON",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.01\",\"leverage\":\"100\",\"multiplier10\":\"3.4\",\"multiplier14\":\"1.1\",\"multiplier21\":\"0.6\",\"takeProfitPercent\":\"100.0\"}",
+      "interval": "5m",
+      "priority": "2",
+      "req_cap_vol": "500",
+      "trade_pair": "ETHUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "BAL",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.015\",\"leverage\":\"100\",\"multiplier10\":\"3.4\",\"multiplier14\":\"1.1\",\"multiplier21\":\"0.6\",\"takeProfitPercent\":\"100.0\"}",
+      "interval": "5m",
+      "priority": "2",
+      "req_cap_vol": "500",
+      "trade_pair": "ETHUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "AGG",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.02\",\"leverage\":\"100\",\"multiplier10\":\"3.4\",\"multiplier14\":\"1.1\",\"multiplier21\":\"0.6\",\"takeProfitPercent\":\"100.0\"}",
+      "interval": "5m",
+      "priority": "2",
+      "req_cap_vol": "500",
+      "trade_pair": "ETHUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "CON",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.025\",\"leverage\":\"40\",\"multiplier10\":\"\",\"multiplier14\":\"\",\"multiplier21\":\"\",\"takeProfitPercent\":\"50.0\"}",
+      "interval": "5m",
+      "priority": "3",
+      "req_cap_vol": "500",
+      "trade_pair": "SOLUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "BAL",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.03125\",\"leverage\":\"40\",\"multiplier10\":\"\",\"multiplier14\":\"\",\"multiplier21\":\"\",\"takeProfitPercent\":\"50.0\"}",
+      "interval": "5m",
+      "priority": "3",
+      "req_cap_vol": "500",
+      "trade_pair": "SOLUSDT",
+      "trade_type_code": "FUT"
+    },
+    {
+      "algorithm_function": "ST1",
+      "capital_risk_code": "AGG",
+      "exchange_code": "BNB",
+      "function_argument": "{\"investVolPercent\":\"0.0375\",\"leverage\":\"40\",\"multiplier10\":\"\",\"multiplier14\":\"\",\"multiplier21\":\"\",\"takeProfitPercent\":\"50.0\"}",
+      "interval": "5m",
+      "priority": "3",
+      "req_cap_vol": "500",
+      "trade_pair": "SOLUSDT",
+      "trade_type_code": "FUT"
+    }
+  ]
+}
