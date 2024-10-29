@@ -1,13 +1,8 @@
-name: Update Lambda on AWS - DEV
+name: Build and Run Algorithm
 
 # Controls when the action will run. Invokes the workflow on push events but only for the main branch
 on: 
   workflow_dispatch:
-    inputs:
-        lambda_function:
-          description: 'Name of the Lambda function to deploy (e.g., lambda-1 or lambda-2)'
-          required: true
-          default: ''
 
 # Permission can be added at job level or workflow level    
 permissions:
@@ -16,8 +11,6 @@ permissions:
 jobs:
  deploy:
     runs-on: ubuntu-latest
-    environment: dev
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -27,29 +20,17 @@ jobs:
         with:
           # Semantic version range syntax or exact version of Go
           go-version: '1.21.x'
-
-      - name: Build
-        run: |
-          # Navigate to the changed Lambda directory
-          go build -o bootstrap ./${{ github.event.inputs.lambda_function }}/main.go 
-      - name: Zip the name file
-        run: zip main.zip bootstrap
-
+          
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1 # Set your region
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GithubAssumeLambdaDevRole
-          role-duration-seconds: 2400
+          aws-region: ap-southeast-1 # Set your region
 
-      - name: Upload to S3
+      - name: Run
         run: |
-          aws s3 cp main.zip s3://${{ secrets.S3_BUCKET }}/${{ github.event.inputs.lambda_function }}.zip
-      - name: Deploy to Lambda
-        run: |
-          echo "Updating ${{ env.ZIP_FILE_NAME }}.zip to Lambda..."
-          aws lambda update-function-code \
-            --function-name ${{ github.event.inputs.lambda_function }} \
-             --s3-bucket ${{ secrets.S3_BUCKET }} --s3-key ${{ github.event.inputs.lambda_function }}.zip
+          export AWS_REGION="ap-southeast-1"
+          export HOST_API_SECRET=${{ secrets.HOST_API_SECRET }}
+          export DB_CREDENTIALS_SECRET=${{ secrets.DB_CREDENTIALS_SECRET }}
+          go run ./explorer.go
