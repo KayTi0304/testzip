@@ -62,8 +62,8 @@ func Handler(ctx context.Context, request Request) (common.Response, error) {
 		}, nil
 	}
 
-	client = binance.NewFuturesClient(secret.APIKey, secret.SecretKey)
-	//client = binance.NewFuturesClient("LsZXqBiSvmiZ23vEmQpTzQl0khZlxUWCsNmqN3Hp5EbuMCjU1pHjxaLjOQc5VCZg", "YaDdNJ3pn8isRJMkaSpm08rnJhIG0FSj3afMjcHK1aTOa2sORe0kpw6fC9BT55fY")
+	//client = binance.NewFuturesClient(secret.APIKey, secret.SecretKey)
+	client = binance.NewFuturesClient("<API KEY>", "<SECRET KEY>")
 
 	whitelist, err := common.GetActiveUSDTFuturesPairs(client)
 	if err != nil {
